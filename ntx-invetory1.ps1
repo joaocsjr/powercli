@@ -6,8 +6,7 @@
     This script get some basics informations 
     about Nutanix AHV enviroment  
 .NOTES  
-       Author     : Joao castro - jcastro@jcastro.net
-    Requires   : PowerShell and NutanixCmdLets 
+
 .LINK  #>
 
 
