@@ -78,12 +78,12 @@ Add-Content $HTMLReport $ResultSet
 $Report  | Export-Csv -NoTypeInformation -UseCulture -Path  F:\Scripts\export\nutanix$((Get-Date).ToString('MM-dd-yyyy')).csv
 
 #send email with html 
-$recipients = "suportevirtualizacao@br.g.nii.com"
-#$recipients = "Joao.castro@br.g.nii.com"
+$recipients = "suportevirtualizacao@domain.com"
+#$recipients = "Joao.castro@domain.com"
 $smtpServer = "smtp.server.com.br" 
 $MailFrom = "alertavmware@server.com.br" 
-#$mailto = "suportevirtualizacao@br.g.nii.com" 
-#$mailto = "Joao.castro@br.g.nii.com"
+#$mailto = "suportevirtualizacao@domain.com" 
+#$mailto = "Joao.castro@domain.com"
 $mailto = $recipients
 $msg = new-object Net.Mail.MailMessage  
 $smtp = new-object Net.Mail.SmtpClient($smtpServer)  

@@ -35,11 +35,11 @@ $HTMLReport = "F:\Scripts\export\alarms.html"
 
  $Report | Export-Csv -NoTypeInformation -UseCulture -Path  F:\Scripts\export\alarms$((Get-Date).ToString('MM-dd-yyyy')).csv
 
-$recipients = "Joao.castro@br.g.nii.com,anderson.souza2@br.g.nii.com"
+$recipients = "Joao.castro@domain.com,anderson.souza2@domain.com"
 $smtpServer = "smtp.server.com.br" 
 $MailFrom = "alertavmware@server.com.br" 
-#$mailto = "suportevirtualizacao@br.g.nii.com" 
-#$mailto = "Joao.castro@br.g.nii.com"
+#$mailto = "suportevirtualizacao@domain.com" 
+#$mailto = "Joao.castro@domain.com"
 $mailto = $recipients
 $msg = new-object Net.Mail.MailMessage  
 $smtp = new-object Net.Mail.SmtpClient($smtpServer)  

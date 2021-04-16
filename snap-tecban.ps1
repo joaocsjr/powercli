@@ -64,11 +64,11 @@ $HTMLReport = "e:\Scripts\export\Snapshot.html"
  $Report | Export-Csv -NoTypeInformation -UseCulture -Path  e:\Scripts\export\Snapshot$((Get-Date).ToString('MM-dd-yyyy')).csv
 
  $recipients = "joao.souza@server.com"
- #$recipients = "Joao.castro@br.g.nii.com,anderson.souza2@br.g.nii.com"
+ #$recipients = "Joao.castro@domain.com,anderson.souza2@domain.com"
  $smtpServer = "ain2pr0202.server.com" 
  $MailFrom = "alertavmware@server.com" 
- #$mailto = "suportevirtualizacao@br.g.nii.com" 
- #$mailto = "Joao.castro@br.g.nii.com"
+ #$mailto = "suportevirtualizacao@domain.com" 
+ #$mailto = "Joao.castro@domain.com"
  $mailto = $recipients
  $msg = new-object Net.Mail.MailMessage  
  $smtp = new-object Net.Mail.SmtpClient($smtpServer)  
