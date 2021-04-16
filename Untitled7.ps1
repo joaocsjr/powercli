@@ -11,7 +11,7 @@
 #>
  
 # Connect to the vCenter
-Connect-VIServer vCenter.nextel.com.br
+Connect-VIServer vCenter.server.com.br
 #Create vmInfo object
 $vmInfo = @()
     $vmInfoTemp = New-Object "PSCustomObject"

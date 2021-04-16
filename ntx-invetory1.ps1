@@ -73,8 +73,8 @@ $Report  | Export-Csv -NoTypeInformation -UseCulture -Path  F:\Scripts\export\nu
 #send email with html 
 $recipients = "destinationemail@domain.com.br"
 #$recipients = "Joao.castro@domain.com.br"
-$smtpServer = "smtp.nextel.com.br" 
-$MailFrom = "alertavmware@nextel.com.br" 
+$smtpServer = "smtp.server.com.br" 
+$MailFrom = "alertavmware@server.com.br" 
 #$mailto = "suportevirtualizacao@domain.com.br" 
 #$mailto = "Joao.castro@domain.com.br"
 $mailto = $recipients

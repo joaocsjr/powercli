@@ -5,7 +5,7 @@
 
 [cmdletbinding()] Param([Parameter(ValuefromPipeline=$true,Mandatory=$true)][string]$vcenter) #Require a vCenter switch from the console and dump it to the variable $vcenter
 
-Connect-VIServer ain3vi7050 -user administrator@vsphere.local   -AllLinked
+Connect-VIServer server -user administrator@vsphere.local   -AllLinked
 
 function Get-DatastoreCompliance {
     $objReport = @() 

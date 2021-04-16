@@ -1,7 +1,7 @@
 ﻿##Import de modulo e conexão no vCenter
 Import-Module VMware.Vimautomation.core
-connect-viserver -Server ain3dv7050 -WarningAction SilentlyContinue 
-connect-viserver -Server ain3vi7050 -WarningAction SilentlyContinue 
+connect-viserver -Server server -WarningAction SilentlyContinue 
+connect-viserver -Server server -WarningAction SilentlyContinue 
 
 
 ##############################

@@ -1,7 +1,7 @@
 ﻿#Add-PSSnapin VMware.VimAutomation.Core
 
 #Connect to vCenter Server
-#Connect-VIServer brslp1vw2pvc001
+#Connect-VIServer server
 
 #Get list of ESXi Hosts
 $esxihosts = Get-Cluster -name BRSLP1TESX200_DEV | Get-VMhost

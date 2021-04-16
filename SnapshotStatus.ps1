@@ -1,10 +1,10 @@
 ##Import de modulo e conex�o no vCenter
 Import-Module VMware.Vimautomation.core
-connect-viserver -Server AIN3CT7050 -user "administrator@vsphere.local" -password "VMwar3!!" -WarningAction SilentlyContinue  -AllLinked
-connect-viserver -Server AIN3DV7050 -user "administrator@vsphere.local" -password "VMwar3!!" -WarningAction SilentlyContinue 
+connect-viserver -Server server -user "administrator@vsphere.local" -password "VMwar3!!" -WarningAction SilentlyContinue  -AllLinked
+connect-viserver -Server server -user "administrator@vsphere.local" -password "VMwar3!!" -WarningAction SilentlyContinue 
 Remove-Item -Path e:\Scripts\Export\Snapshot.html -Force 
 
-$vcenter = "AIN3DV7050"
+$vcenter = "server"
 
 $a = "<style>"
 $a = $a + "h1, h5, th { text-align: center; }"
@@ -53,10 +53,10 @@ $HTMLReport = "E:\Scripts\export\Snapshot.html"
 
  $Report | Export-Csv -NoTypeInformation -UseCulture -Path  F:\Scripts\export\Snapshot$((Get-Date).ToString('MM-dd-yyyy')).csv
 
-$recipients = "joao.souza@tecban.com"
+$recipients = "joao.souza@server.com"
 #$recipients = "Joao.castro@br.g.nii.com,anderson.souza2@br.g.nii.com"
-$smtpServer = "ain2pr0202.tecban.com" 
-$MailFrom = "alertavmware@tecban.com" 
+$smtpServer = "ain2pr0202.server.com" 
+$MailFrom = "alertavmware@server.com" 
 #$mailto = "suportevirtualizacao@br.g.nii.com" 
 #$mailto = "Joao.castro@br.g.nii.com"
 $mailto = $recipients

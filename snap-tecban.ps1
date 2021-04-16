@@ -7,10 +7,10 @@ $username = "administrator@vsphere.local"
 $password = Get-Content E:\scripts\cred.txt | ConvertTo-SecureString 
 $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $username,$password
 
-#get-vm -name ain3ct5353.tecban.com | Get-Snapshot | select   @{Label="uid";E={( $_.uid | %{$_.split(':')[0]} | %{$_.split('@')}|%{$_.split('/')} |%{$_.split('\')[0]} |%{$_.split('=')[0]} )}}
+#get-vm -name ain3ct5353.server.com | Get-Snapshot | select   @{Label="uid";E={( $_.uid | %{$_.split(':')[0]} | %{$_.split('@')}|%{$_.split('/')} |%{$_.split('\')[0]} |%{$_.split('=')[0]} )}}
 
 
-Connect-VIServer -Server ain3ct7050 -Protocol https -AllLinked -Credential $cred
+Connect-VIServer -Server server -Protocol https -AllLinked -Credential $cred
 
 
 $a = "<style>"
@@ -63,10 +63,10 @@ $HTMLReport = "e:\Scripts\export\Snapshot.html"
 
  $Report | Export-Csv -NoTypeInformation -UseCulture -Path  e:\Scripts\export\Snapshot$((Get-Date).ToString('MM-dd-yyyy')).csv
 
- $recipients = "joao.souza@tecban.com"
+ $recipients = "joao.souza@server.com"
  #$recipients = "Joao.castro@br.g.nii.com,anderson.souza2@br.g.nii.com"
- $smtpServer = "ain2pr0202.tecban.com" 
- $MailFrom = "alertavmware@tecban.com" 
+ $smtpServer = "ain2pr0202.server.com" 
+ $MailFrom = "alertavmware@server.com" 
  #$mailto = "suportevirtualizacao@br.g.nii.com" 
  #$mailto = "Joao.castro@br.g.nii.com"
  $mailto = $recipients

@@ -1,10 +1,10 @@
 Import-Module VMware.Vimautomation.core
 Import-Module E:\temp\DRSRule-master\DRSRule-master\DRSRule
-connect-viserver -Server ain3dv7050  -user 'administrator@vsphere.local' -Password 'VMwar3!!'-WarningAction SilentlyContinue -AllLinked
+connect-viserver -Server server  -user 'administrator@vsphere.local' -Password 'VMwar3!!'-WarningAction SilentlyContinue -AllLinked
 #Connect-VIServer -Server $vCenter -user $vCenterUser -password $vCenterUserPasswd
 #$password = Get-Content E:\scripts\cred.txt | ConvertTo-SecureString 
 #$cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $username,$password
-#$vCenter = 'ain3ct7050.tecban.com'
+#$vCenter = 'server.server.com'
 #$vCenteruser ='administrator@vsphere.local'
 #$vCenterUserPasswd='not secret'
 #
@@ -47,9 +47,9 @@ $vmcount2 =$VMcluster2.Count
 $vmcount3 =$VMcluster3.Count
 
 
-$sendFrom = 'joao.souza@tecban.com.br'
-$sendTo = 'joao.souza@tecban.com.br'
-$smtp = 'smtp.tecban.com'
+$sendFrom = 'joao.souza@server.com.br'
+$sendTo = 'joao.souza@server.com.br'
+$smtp = 'smtp.server.com'
 
 $s1 = "`n$vcenter`n As seguintes Virtual Machine fazem parte do DRS Group:`n$ClusterRule`n No Cluster:`n$Cluster1`nContem as seguintes virtual machines:`n"
 $s1 += "$VMbody1`n"

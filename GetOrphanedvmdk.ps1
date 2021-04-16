@@ -5,7 +5,7 @@
 
 #Main
 
-$arrayVC = "brslp1vw2pvc001"
+$arrayVC = "server"
 $OutputFile = "F:\Scripts\Export\OrphanedVMDK.txt"
 
 Foreach ($strVC in $arrayVC)

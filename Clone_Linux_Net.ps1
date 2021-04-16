@@ -2,7 +2,7 @@
 
 ##Import de modulo e conexão no vCenter
 add-pssnapin VMware.Vimautomation.core
-connect-viserver -Server brslp1vw2pvc001.nextel.com.br -WarningAction SilentlyContinue 
+connect-viserver -Server server.server.com.br -WarningAction SilentlyContinue 
 
 ###########################################################################################################################
 #                                                                                                                         #
@@ -84,7 +84,7 @@ foreach ($item in $vmlist) {
     $sdns = $item.sdnswins
     #$swins = $item.sdnswins
 
-$linuxSpec = New-OSCustomizationSpec –Name LinuxCustom –Domain nextel.com.br –DnsServer “192.168.0.10”, “192.168.0.20” –NamingScheme VM –OSType Linux
+$linuxSpec = New-OSCustomizationSpec –Name LinuxCustom –Domain server.com.br –DnsServer “192.168.0.10”, “192.168.0.20” –NamingScheme VM –OSType Linux
 $specClone = get-OSCustomizationSpec –Spec $linuxSpec –Type NonPersistent
 $nicMapping = Get-OSCustomizationNicMapping –OSCustomizationSpec $specClone
 # Apply the customization

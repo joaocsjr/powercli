@@ -1,7 +1,7 @@
 ﻿##Import de modulo e conexão no vCenter
 import-module VMware.Vimautomation.core
-connect-viserver -Server ain3ct7050  -WarningAction SilentlyContinue 
-connect-viserver -Server ain3dv7050  -WarningAction SilentlyContinue 
+connect-viserver -Server server  -WarningAction SilentlyContinue 
+connect-viserver -Server server  -WarningAction SilentlyContinue 
 
 $vmlist = Import-CSV "E:\Scripts\state.csv"
   foreach ($item in $vmlist) {

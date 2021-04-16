@@ -1,7 +1,7 @@
 ﻿##Import de modulo e conexão no vCenter
 Import-Module VMware.Vimautomation.core
 #add-pssnapin VMware.Vimautomation.core
-connect-viserver -Server brslp1vw2pvc001.nextel.com.br -WarningAction SilentlyContinue 
+connect-viserver -Server server.server.com.br -WarningAction SilentlyContinue 
 
 
 
@@ -90,8 +90,8 @@ Get-VMToolsStatus | Export-Csv -NoTypeInformation -UseCulture -Path  F:\Scripts\
 
 
 $recipients = "Joao.castro@br.g.nii.com"
-$smtpServer = "smtp.nextel.com.br" 
-$MailFrom = "alertavmware@nextel.com.br" 
+$smtpServer = "smtp.server.com.br" 
+$MailFrom = "alertavmware@server.com.br" 
 #$mailto = "suportevirtualizacao@br.g.nii.com" 
 #$mailto = "Joao.castro@br.g.nii.com"
 $mailto = $recipients

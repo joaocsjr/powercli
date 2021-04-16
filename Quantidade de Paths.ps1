@@ -1,4 +1,4 @@
-﻿#$esxName = 'brslp1tesx014.nextel.com.br', 'brslp1tesx020.nextel.com.br'
+﻿#$esxName = 'brslp1tesx014.server.com.br', 'brslp1tesx020.server.com.br'
 $report= @()
 #$esxilist = Get-VMHost -Name $esxName
 

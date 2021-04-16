@@ -1,6 +1,6 @@
 ﻿##Import de modulo e conexão no vCenter
 Import-Module VMware.Vimautomation.core
-connect-viserver -Server vcenter.nextel.com.br -WarningAction SilentlyContinue 
+connect-viserver -Server vcenter.server.com.br -WarningAction SilentlyContinue 
 ##############################
 #SCRIPT MOVE TO NUTANIX ######
 ##############################

@@ -13,10 +13,10 @@ $username = "administrator@vsphere.local"
 $password = Get-Content E:\scripts\cred.txt | ConvertTo-SecureString 
 $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $username,$password
 
-#get-vm -name ain3ct5353.tecban.com | Get-Snapshot | select   @{Label="uid";E={( $_.uid | %{$_.split(':')[0]} | %{$_.split('@')}|%{$_.split('/')} |%{$_.split('\')[0]} |%{$_.split('=')[0]} )}}
+#get-vm -name ain3ct5353.server.com | Get-Snapshot | select   @{Label="uid";E={( $_.uid | %{$_.split(':')[0]} | %{$_.split('@')}|%{$_.split('/')} |%{$_.split('\')[0]} |%{$_.split('=')[0]} )}}
 
 
-Connect-VIServer -Server ain3ct7050 -Protocol https -AllLinked -Credential $cred
+Connect-VIServer -Server server -Protocol https -AllLinked -Credential $cred
 $Report = get-vm | Where-Object { $_ | get-cddrive | Where-Object { $_.ConnectionState.Connected -eq "true" -and $_.ISOPath -like "*.ISO*"} } | select Name, @{Name=".ISO Path";Expression={(Get-CDDrive $_).isopath }}
 
 
@@ -49,8 +49,8 @@ $HTMLReport = "e:\Scripts\export\iso.html"
   
 $recipients = "suportevirtualizacao@br.g.nii.com"
 #$recipients = "Joao.castro@br.g.nii.com,anderson.souza2@br.g.nii.com"
-$smtpServer = "smtp.nextel.com.br" 
-$MailFrom = "alertavmware@nextel.com.br" 
+$smtpServer = "smtp.server.com.br" 
+$MailFrom = "alertavmware@server.com.br" 
 #$mailto = "suportevirtualizacao@br.g.nii.com" 
 #$mailto = "Joao.castro@br.g.nii.com"
 $mailto = $recipients

@@ -12,7 +12,7 @@ Set-PowerCLIConfiguration -DefaultVIServerMode Multiple
 Set-PowerCLIConfiguration –InvalidCertificateAction Ignore
 
 #conecta em vcenter
-Connect-VIServer ain3dv7050 –Credential (Get-Credential)
+Connect-VIServer server –Credential (Get-Credential)
 
 #lista de menu
 Connect-VIServer -menu

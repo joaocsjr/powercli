@@ -2,7 +2,7 @@
 
 Import-Module VMware.Vimautomation.core
 
-connect-viserver -Server ain3dv7050 -User administrator@vpshere.local -WarningAction SilentlyContinue 
+connect-viserver -Server server -User administrator@vpshere.local -WarningAction SilentlyContinue 
 $vmlist = @()
 get-view -ViewType VirtualMachine -Property Name, "Config.Hardware.Device" | ForEach-Object{
 	$vmName = $_.name

@@ -1,6 +1,6 @@
 ##Import de modulo e conexão no vCenter
 Import-Module VMware.Vimautomation.core
-connect-viserver -Server ain3dv7050 -WarningAction SilentlyContinue 
+connect-viserver -Server server -WarningAction SilentlyContinue 
 
 $cred = Get-Credential -UserName "root" -message "Enter new ESXi root password"
 $vmhosts = get-vmhost | Out-GridView -PassThru -Title "Select ESXi hosts for changing the root password"

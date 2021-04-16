@@ -23,7 +23,7 @@ add-PSSnapin -Name NutanixCmdletsPSSnapin
  
 
 #create a secure string to store the password and account // runing only in the first time 
-#$username = "adm_jjuni57@nextel.com.br"
+#$username = "adm_jjuni57@server.com.br"
 #$password = "C@stro221180an@"
 #$secureStringPwd = $password | ConvertTo-SecureString -AsPlainText -Force 
 #$creds = New-Object System.Management.Automation.PSCredential -ArgumentList $user, $secureStringPwd
@@ -34,7 +34,7 @@ add-PSSnapin -Name NutanixCmdletsPSSnapin
 $pwdTxt = Get-Content "F:\Scripts\cred.txt"
 $securePwd = $pwdTxt | ConvertTo-SecureString 
 $credObject = New-Object System.Management.Automation.PSCredential -ArgumentList $username, $securePwd
-Connect-NTNXCluster -Server nutanix.nextel.com.br -UserName $username -Password $securePwd   -AcceptInvalidSSLCerts -ForcedConnection 
+Connect-NTNXCluster -Server nutanix.server.com.br -UserName $username -Password $securePwd   -AcceptInvalidSSLCerts -ForcedConnection 
 
 #crete a hmtl layout
 $a = "<style>"
@@ -80,8 +80,8 @@ $Report  | Export-Csv -NoTypeInformation -UseCulture -Path  F:\Scripts\export\nu
 #send email with html 
 $recipients = "suportevirtualizacao@br.g.nii.com"
 #$recipients = "Joao.castro@br.g.nii.com"
-$smtpServer = "smtp.nextel.com.br" 
-$MailFrom = "alertavmware@nextel.com.br" 
+$smtpServer = "smtp.server.com.br" 
+$MailFrom = "alertavmware@server.com.br" 
 #$mailto = "suportevirtualizacao@br.g.nii.com" 
 #$mailto = "Joao.castro@br.g.nii.com"
 $mailto = $recipients

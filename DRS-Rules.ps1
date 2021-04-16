@@ -1,7 +1,7 @@
 ##Import de modulo e conexão no vCenter
 Import-Module VMware.Vimautomation.core
 Import-Module C:\temp\DRSRule-master\DRSRule-master\DRSRule
-connect-viserver -Server ain3ct7050 -WarningAction SilentlyContinue 
+connect-viserver -Server server -WarningAction SilentlyContinue 
 ##############################
 #SCRIPT ADD VM TO AFFINITY RULE ######
 ##############################

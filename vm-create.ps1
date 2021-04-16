@@ -1,6 +1,6 @@
 ##Import de modulo e conexão no vCenter
 import-module VMware.Vimautomation.core
-connect-viserver -Server ain3dv7050.tecban.com  -User administrator@vsphere.local -Password VMwar3!! -AllLinked
+connect-viserver -Server server.server.com  -User administrator@vsphere.local -Password VMwar3!! -AllLinked
 
 
 $vmName = '*'

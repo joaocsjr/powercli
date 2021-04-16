@@ -2,7 +2,7 @@
 Import-Module VMware.Vimautomation.core
 
 Get-ViPermission –Entity *inventory object*
-connect-viserver -Server ain3dv7050 -user administrator@vpshere.local  -WarningAction SilentlyContinue  -AllLinked
+connect-viserver -Server server -user administrator@vpshere.local  -WarningAction SilentlyContinue  -AllLinked
 
 
 Get-Datastore -tag "*replicated*"  | select Name
